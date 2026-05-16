@@ -1,6 +1,6 @@
 # gojiOS
 A shell OS made for Intel Macs on macOS 10.13 and lower 
-(Have not put up A DUALBOOT tutorial, will put up one soon)
+Dualboot tutorial is on alexxiii10.github.io
 
 # Stuff to do
 Very useless browser,
