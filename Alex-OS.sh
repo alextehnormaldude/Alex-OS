@@ -15,7 +15,7 @@ bootscreen() {
     read -sp "Password: " password
     echo "" # New line after hidden password entry
     
-    if [ "$password" = "G0j1ra" ]; then
+    if [ "$password" = "Alex123" ]; then
         desktop
     else
         bootscreentwo
@@ -25,14 +25,14 @@ bootscreen() {
 desktop() {
     while true; do
         clear
-        echo "Goji OS v1.0"
+        echo "Alex OS"
         echo "Date: $(date '+%Y-%m-%d') Time: $(date '+%H:%M:%S')"
         echo "-----------------------------------------"
         echo "Stuff:"
         echo "1) Notes"
-        echo "2) Goji Files"
+        echo "2) File Manager"
         echo "3) Calculator"
-        echo "4) Gojiranet"
+        echo "4) Website Browser"
         echo "5) System Settings"
         echo "6) Shutdown Terminal Console"
         echo "-----------------------------------------"
@@ -46,7 +46,7 @@ desktop() {
             5) syssett_app ;;
             6) 
                 clear
-                echo "Shutting down Goji OS..."
+                echo "Shutting down OS..."
                 printf '\e[0m' # Reset terminal colours
                 clear
                 exit 0 
@@ -70,7 +70,7 @@ write_app() {
 
 browse_app() {
     clear
-    echo "--- GOJI STORAGE FILES ---"
+    echo "--- ALEX STORAGE FILES ---"
     # List any .txt files available in the running folder
     ls *.txt 2>/dev/null || echo "[No custom notes created yet]"
     echo "--------------------------"
@@ -94,9 +94,9 @@ calculator_app() {
 internet_app() {
     while true; do
         clear
-        echo "Welcome to the Gojiranet"
-        echo "1) Roarer"
-        echo "2) Animtube"
+        echo "Welcome to the Internet"
+        echo "1) Social Media"
+        echo "2) Youtube"
         echo "3) Exit Website Portal"
         read -p "Choose website: " netselect
 
@@ -111,7 +111,7 @@ internet_app() {
 roarer_app() {
     clear
     echo "===================================================="
-    echo "                   Roarer - @$custom_user"
+    echo "                   Media - @$custom_user"
     echo "===================================================="
     echo ""
     
@@ -125,18 +125,18 @@ roarer_app() {
         cat roarer_feed.txt
     else
         echo "[$(date '+%Y-%m-%d')] NETWORK: Feed is entirely empty."
-        echo "Use Option 1 to start broadcasting across Gojiranet!"
+        echo "Use Option 1 to start broadcasting across Social Media!"
     fi
     echo ""
     echo "===================================================="
-    echo "1) Post a Roar  2) Refresh Feed  3) Exit Gojiranet"
+    echo "1) Post  2) Refresh Feed  3) Exit Internet"
     echo "===================================================="
     read -p "Select: " roar_choice
 
     if [ "$roar_choice" = "1" ]; then
         clear
         echo "===================================================="
-        echo "               BROADCAST TO GOJIRANET FEED           "
+        echo "               BROADCAST TO INTERNET FEED           "
         echo "===================================================="
         echo ""
         
@@ -189,7 +189,7 @@ syssett_app() {
 
 bootscreentwo() {
     clear
-    echo "Goji OS"
+    echo "aLEX OS"
     echo "1) Admin Login"
     echo "2) Guest Login"
     read -p "Option: " logintype
@@ -224,7 +224,7 @@ animtube_app() {
     while true; do
         clear
         echo "===================================================="
-        echo "             ANIMTUBE - GOJIRANET MEDIA             "
+        echo "             YOUTUBE - MEDIA             "
         echo "===================================================="
         echo " [STREAMING PLATFORM ACTIVE] "
         echo "===================================================="
